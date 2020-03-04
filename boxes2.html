@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MovingBoxesToo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .container{
+                display: grid;
+                /* grid-gap: 2em; */
+                grid-template-columns: 200px 200px;
+                justify-content: center;
+            }
+            /* trying to hover over the main div to animate the child divs*/
+            #redBox {
+            transition: transform 3s;
+            }
+
+            .container:hover #redBox {
+            transform-origin: top left;
+            transform: rotate(90deg);
+            }
+            #yellowBox {
+            transition: transform 3s;
+            }
+
+            .container:hover #yellowBox {
+            transform-origin: top right;
+            transform: rotate(-90deg);
+            }
+            #blueBox {
+            transition: transform 3s;
+            }
+
+            .container:hover #blueBox {
+            transform-origin: bottom left;
+            transform: rotate(-90deg);
+            }
+            #greenBox {
+            transition: transform 3s;
+            }
+
+            .container:hover #greenBox {
+            transform-origin: bottom right;
+            transform: rotate(90deg);
+            }
+
+            #redBox{
+                border: 5px solid red;
+                background-color: red;
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;               
+                padding: 5px;
+                transform-origin: top left;
+
+                
+                
+            }
+            #redBox:hover{
+                /* animation: spinDownLeft 3s; */
+                transition: transform 3s;
+                transform: rotate(90deg);
+            }
+            #yellowBox{
+                border: 5px solid yellow;
+                background-color: yellow;
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;
+                padding: 5px;
+                /* transform-origin: top left ; */
+            }
+            /* #yellowBox:hover{
+                transition: transform 3s;
+                transform: rotate(-90deg);
+               
+            } */
+            #greenBox{
+                border: 5px solid green;
+                background-color: green;
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;
+                padding: 5px;
+                transform-origin: bottom right;
+                
+            }
+            #greenBox:hover{
+                transition: transform 3s;
+                transform: rotate(90deg);
+            }
+            #blueBox{
+                border: 5px solid blue;
+                background-color: blue;
+                box-sizing: border-box;
+                width: 200px;
+                height: 200px;
+                padding: 5px;
+                transform-origin: bottom left;
+                
+            }
+            #blueBox:hover{
+                transition: transform 3s;
+                transform: rotate(-90deg);
+            }
+
+            /*Keyframes*/
+            /* @keyframes spinDownRight{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(-90deg);
+                    
+                }
+            }
+            @keyframes spinDownLeft{
+                from{
+                    transform: rotate(0deg);
+                }
+                to{
+                    transform: rotate(90deg);
+                }
+            }
+            @keyframes spinUpRight{
+                from{
+                    transform:rotate(0deg);
+                }
+                to{
+                    transform:rotate(90deg);
+                }
+            }
+            @keyframes spinUpLeft{
+                from{
+                    transform:rotate(0deg);
+                }
+                to{
+                    transform:rotate(-90deg);
+                }
+            }
+             */
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div id="redBox"></div>
+            <div id="yellowBox"></div>
+            <div id="blueBox"></div>
+            <div id="greenBox"></div>
+        </div>
+        
+        
+        <script>
+            //THINK I MAY NEED A FUNCTION TO ACTIVATE ALL ANIMATIONS SIMULTANEOUSLY
+        </script>
+    </body>
+</html>
